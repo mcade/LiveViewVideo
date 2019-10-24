@@ -6,6 +6,10 @@ defmodule MyAppWeb.PageLive.Video do
   end
 
   def mount(_, socket) do
-    {:ok, socket}
+    {:ok, assign(socket, show_video: false)}
+  end
+
+  def handle_event("show-video", _, socket) do
+    {:noreply, assign(socket, show_video: true)}
   end
 end

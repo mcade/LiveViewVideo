@@ -1,5 +1,8 @@
 <h1>Live View Video Page</h1>
 
-<video autoplay loop muted playsinline src="https://www.w3schools.com/tags/movie.mp4">
-	Your browser does not support the video tag.
-</video>
+<button phx-click="show-video">show video</button>
+<%= if @show_video do %>
+	<video autoplay loop muted playsinline controls src="https://www.w3schools.com/tags/movie.mp4">
+		Your browser does not support the video tag.
+	</video>
+<% end %>
