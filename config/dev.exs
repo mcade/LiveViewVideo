@@ -17,6 +17,7 @@ config :my_app, MyApp.Repo,
 # with webpack to recompile .js and .css sources.
 config :my_app, MyAppWeb.Endpoint,
   http: [port: 4000],
+  live_view: [signing_salt: "tfZmaLCZ00yxeH2i7m86Q4JlsAJYcoaq"],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
